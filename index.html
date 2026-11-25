@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Jarimatika CNN — Klasifikasi Angka Jarimatika 1–9</title>
+  <meta name="description" content="Klasifikasi angka jarimatika 1–9 dari foto tangan menggunakan Convolutional Neural Network dengan Backpropagation. Diproses langsung di perangkat Anda." />
+  <meta name="theme-color" content="#1F1E5C" />
+  <link rel="icon" href="./assets/img/logo.svg" type="image/svg+xml" />
+  <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <!-- Splash / loading screen -->
+  <div id="splash" role="status" aria-live="polite">
+    <div class="splash-inner">
+      <svg class="splash-logo" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="2" y="2" width="60" height="60" rx="16" class="sl-bg" />
+        <rect x="14" y="26" width="7" height="24" rx="3.5" class="sl-bar b1" />
+        <rect x="24" y="16" width="7" height="34" rx="3.5" class="sl-bar b2" />
+        <rect x="34" y="20" width="7" height="30" rx="3.5" class="sl-bar b3" />
+        <rect x="44" y="28" width="7" height="22" rx="3.5" class="sl-bar b4" />
+        <circle cx="50" cy="16" r="5" class="sl-dot" />
+      </svg>
+      <h1 class="splash-title">Jarimatika<span>CNN</span></h1>
+      <p class="splash-sub">Klasifikasi angka jarimatika 1–9</p>
+      <div class="splash-progress" aria-hidden="true"><span id="splash-bar"></span></div>
+      <p class="splash-status" id="splash-status">Memuat model…</p>
+      <button class="btn btn-light btn-sm splash-retry" id="splash-retry" hidden>Coba lagi</button>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#main">Lewati ke konten</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-row">
+      <a href="#/" class="brand">
+        <svg viewBox="0 0 64 64" class="brand-mark" aria-hidden="true">
+          <rect x="2" y="2" width="60" height="60" rx="16" fill="#3B3AA8" />
+          <rect x="14" y="26" width="7" height="24" rx="3.5" fill="#FAF7F2" />
+          <rect x="24" y="16" width="7" height="34" rx="3.5" fill="#FAF7F2" />
+          <rect x="34" y="20" width="7" height="30" rx="3.5" fill="#FAF7F2" />
+          <rect x="44" y="28" width="7" height="22" rx="3.5" fill="#FAF7F2" />
+          <circle cx="50" cy="16" r="5" fill="#F2994A" />
+        </svg>
+        <span class="brand-text">Jarimatika <b>CNN</b><span class="visually-hidden"> — Beranda</span></span>
+      </a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Navigasi utama">
+        <a href="#/" data-route="/">Beranda</a>
+        <a href="#/tentang" data-route="/tentang">Tentang</a>
+        <a href="#/klasifikasi" data-route="/klasifikasi">Klasifikasi</a>
+        <a href="#/hasil" data-route="/hasil" id="nav-hasil">Hasil</a>
+        <a href="#/klasifikasi" class="btn btn-primary btn-sm nav-cta">Mulai klasifikasi</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="view" class="view"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p><b>Jarimatika CNN</b> · Proyek Akhir Jaringan Syaraf Tiruan · Kelompok 5</p>
+      <p class="muted">Gambar diproses langsung di perangkat Anda dan tidak dikirim ke server mana pun.</p>
+    </div>
+  </footer>
+
+  <div class="toast-wrap" id="toasts" aria-live="polite"></div>
+
+  <noscript><div class="noscript">Website ini membutuhkan JavaScript. Aktifkan JavaScript pada browser Anda.</div></noscript>
+  <script type="module" src="./assets/js/app.js"></script>
+</body>
+</html>

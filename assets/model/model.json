@@ -1,0 +1,79 @@
+{
+ "versi": "1.0",
+ "arsitektur": {
+  "input_size": 64,
+  "n_filter": 8,
+  "kernel_size": 3,
+  "n_hidden": 16,
+  "n_kelas": 9,
+  "alpha": 0.01
+ },
+ "parameter": {
+  "K": {
+   "shape": [
+    8,
+    3,
+    3
+   ],
+   "offset": 0,
+   "length": 72
+  },
+  "bc": {
+   "shape": [
+    8
+   ],
+   "offset": 72,
+   "length": 8
+  },
+  "V": {
+   "shape": [
+    8192,
+    16
+   ],
+   "offset": 80,
+   "length": 131072
+  },
+  "v0": {
+   "shape": [
+    16
+   ],
+   "offset": 131152,
+   "length": 16
+  },
+  "W": {
+   "shape": [
+    16,
+    9
+   ],
+   "offset": 131168,
+   "length": 144
+  },
+  "w0": {
+   "shape": [
+    9
+   ],
+   "offset": 131312,
+   "length": 9
+  }
+ },
+ "total_parameter": 131321,
+ "preprocessing": {
+  "margin_crop": 0.2,
+  "sisi_min": 128,
+  "topeng": true,
+  "ukuran": 64,
+  "grayscale": [
+   0.299,
+   0.587,
+   0.114
+  ]
+ },
+ "evaluasi": {
+  "akurasi_uji": 0.9444,
+  "presisi_makro": 0.9492,
+  "recall_makro": 0.9444,
+  "jumlah_uji": 180,
+  "jumlah_latih": 720,
+  "catatan": "Pembagian acak berstrata 80:20, seed 42, dataset bertopeng (latar dihitamkan)."
+ }
+}
